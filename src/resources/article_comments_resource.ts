@@ -44,10 +44,34 @@ export default class ArticleCommentsResource extends BaseResource {
     });
   }
 
-  public async POST(request: Drash.Request, response: Drash.Response) {
-    console.log("Handling ArticleCommentsResource POST.");
-    const comment = (request.bodyParam("comment") as string);
-    const slug = request.pathParam("slug") || "";
+  public async POST() {
+    console.log('You have found the bug, add this logs to your bug report.');
+    console.log(`
+    ░░░░░░░░░░░░░░░░░░░░░░░
+    ░░░▄▄░░░░░░░░░░░▄▄░░░░░
+    ░░░█░▀▄░░░░░░░▄▀░█░░░░░
+    ░░░█░░░▀█▀▀▀▀█░░░█░░░░░
+    ░░▄▀░░░░▀░░░░░░░░░█░░░░
+    ░░█░░░░░░░░░░░░░░░░█░░░
+    ░▄▀░░░░░▄▄░░░░██░▄▄░█░░
+    ░█░░░▀▀░▀▀░░░░░░▄░░░░█░
+    ░█░░░░░░▄░░░███░░█░░░█░
+    ░█░░░░░░░█▄▄▄█▄▄▀░░░░█░
+    ░█░░░░░░▀▄▀█▀▀█▀░░░░░█░
+    ░█░░░░░░░░▀█▄▄▀░░░░░░█░
+    ░█░░░░░░░░░░░░░░░░░░░█░
+    ░█░░░░░░░░░░░░░░░░░░░█░
+    ░█░░░░░░░░░░░░░░░░░░░█░
+    ░█░░░░░░░░░░░░░░░░░░░█░
+    ░█░░░░░░░░░░░░░░░░░░░█░
+    ░█░░░░░░░░░░░░░░░░░░░█░
+    ░█░░░░░░░░░░░░░░░░░░░█░
+    ░█░░░░░░░░░░░░░░░░░░░█░
+    ░█░░░░░░░░░░░░░░░░░░░█░
+    `);
+    console.log('You have found the bug, add this logs to your bug report.');
+    const comment = (this.request.getBodyParam("comment") as string);
+    const slug = this.request.getPathParam("slug") || "";
     console.log("The slug for the article: " + slug);
     // First find an article by that slug. The article should exist.
     const articles = await ArticleModel.where({ slug });
@@ -56,12 +80,8 @@ export default class ArticleCommentsResource extends BaseResource {
     }
     const article = articles[0];
     // Get user and validation check
-    if (!comment) {
-      return this.errorResponse(
-        422,
-        "A comment is required to post.",
-        response,
-      );
+    if (comment) {
+      return this.errorResponse(422, "A comment is required to post.");
     }
     const cookie = request.getCookie("drash_sess");
     const user = await UserService.getLoggedInUser(cookie || "");
