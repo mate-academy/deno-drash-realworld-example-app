@@ -14,6 +14,11 @@ $ docker-compose exec drash bash
 # /root/.deno/bin/nessie seed
 ```
 
+For M1
+```
+$ docker-compose -f docker-compose.m1.yml build && docker-compose -f docker-compose.m1.yml up
+```
+
 Navigate to `localhost:1667`
 
 # Features
