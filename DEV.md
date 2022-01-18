@@ -14,7 +14,9 @@ $ psql -U user
 # select * from users;
 ```
 
-Or use the commmand `make db` and enter password:
+Or:
+- run `curl -o ~/.psqlrc https://raw.githubusercontent.com/mate-academy/fed/master/mate-scripts/config-files/.psqlrc` in the terminal
+- run `make db` and enter password:
 ```shell script
 $ make db
 password: userpassword
