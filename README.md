@@ -16,7 +16,7 @@ For M1
 $ docker-compose -f docker-compose.m1.yml build && docker-compose -f docker-compose.m1.yml up
 ```
 
-Navigate to `localhost:1667`
+Navigate to `http://localhost:1667`
 
 # Features
 
