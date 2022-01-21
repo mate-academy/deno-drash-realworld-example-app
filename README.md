@@ -8,12 +8,12 @@ and docker-compose.
 # How to Run
 
 ```
-$ docker-compose build && docker-compose up -d
+$ sudo docker-compose build && sudo docker-compose up
 ```
 
 For M1
 ```
-$ docker-compose -f docker-compose.m1.yml build && docker-compose -f docker-compose.m1.yml up
+$ sudo docker-compose -f docker-compose.m1.yml build && sudo docker-compose -f docker-compose.m1.yml up
 ```
 
 Navigate to http://localhost:1667
