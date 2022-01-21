@@ -16,7 +16,7 @@ $ docker-compose exec drash bash
 
 For M1
 ```
-$ docker-compose -f docker-compose.m1.yml build && docker-compose -f docker-compose.m1.yml up
+$ sudo docker-compose -f docker-compose.m1.yml build && sudo docker-compose -f docker-compose.m1.yml up
 ```
 
 Navigate to http://localhost:1667
