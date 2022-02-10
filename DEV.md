@@ -15,7 +15,7 @@ $ psql -U user
 ```
 
 Or:
-- run `curl -o ~/.psqlrc https://raw.githubusercontent.com/mate-academy/fed/master/mate-scripts/config-files/.psqlrc` in the terminal
+- run `curl -o ~/.psqlrc https://raw.githubusercontent.com/mate-academy/fed/master/mate-scripts/config-files/.psqlrc` in the terminal (for Ubuntu: run `sudo apt update` and `sudo apt install postgresql postgresql-contrib` previously)
 - run `make db` and enter password:
 ```shell script
 $ make db
