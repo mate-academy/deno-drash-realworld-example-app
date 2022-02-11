@@ -17,9 +17,9 @@ $ psql -U user
 Or:
 1. Ubuntu setup: 
    ```shell script
-   curl -o ~/.psqlrc https://raw.githubusercontent.com/mate-academy/fed/master/mate-scripts/config-files/.psqlrc
-   sudo apt update
-   sudo apt install postgresql postgresql-contrib
+   $ curl -o ~/.psqlrc https://raw.githubusercontent.com/mate-academy/fed/master/mate-scripts/config-files/.psqlrc
+   $ sudo apt update
+   $ sudo apt install postgresql postgresql-contrib
    
    $ make db
    password: userpassword
@@ -27,9 +27,9 @@ Or:
    ```
 1. macOS setup:
    ```shell script
-   curl -o ~/.psqlrc https://raw.githubusercontent.com/mate-academy/fed/master/mate-scripts/config-files/.psqlrc
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   brew install postgresql
+   $ curl -o ~/.psqlrc https://raw.githubusercontent.com/mate-academy/fed/master/mate-scripts/config-files/.psqlrc
+   $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   $ brew install postgresql
    
    $ make db
    password: userpassword
