@@ -15,13 +15,27 @@ $ psql -U user
 ```
 
 Or:
-- run `curl -o ~/.psqlrc https://raw.githubusercontent.com/mate-academy/fed/master/mate-scripts/config-files/.psqlrc` in the terminal (for Ubuntu: run `sudo apt update` and `sudo apt install postgresql postgresql-contrib` previously)
-- run `make db` and enter password:
-```shell script
-$ make db
-password: userpassword
-# select * from users;
-```
+1. Ubuntu setup: 
+   ```shell script
+   curl -o ~/.psqlrc https://raw.githubusercontent.com/mate-academy/fed/master/mate-scripts/config-files/.psqlrc
+   sudo apt update
+   sudo apt install postgresql postgresql-contrib
+   
+   $ make db
+   password: userpassword
+   # select * from users;
+   ```
+1. macOS setup:
+   ```shell script
+   curl -o ~/.psqlrc https://raw.githubusercontent.com/mate-academy/fed/master/mate-scripts/config-files/.psqlrc
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   brew install postgresql
+   
+   $ make db
+   password: userpassword
+   # select * from users;
+   ```
+
 
 # Make a DB Data Dump (Update the DB)
 
