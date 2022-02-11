@@ -8,7 +8,7 @@
 # Login to Postgres Container
 
 ```shell script
-$ docker exec -it realworld_postgres bash
+$ sudo docker exec -it realworld_postgres bash
 $ psql -U user
 # \c realworld
 # select * from users;
@@ -45,9 +45,9 @@ The postgres container uses a dump file to seed the database - this file is at
 Make your changes to the database if needed by directly modifying it inside of
 the `psql` shell
 
-```
+```shell script
 $ cd /path/to/deno-drash-realworld-example
-$ docker exec -t realworld_postgres pg_dumpall -c -U user > postgres_dump.sql
+$ sudo docker exec -t realworld_postgres pg_dumpall -c -U user > postgres_dump.sql
 $ mv ./postgres_dump.sql ./.docker/data/postgres_dump.sql
 ```
 
@@ -57,7 +57,7 @@ Remember to commit this file
 
 Example query from the CLI:
 
-```
+```sql
 CREATE TABLE article_comments (
   id SERIAL PRIMARY KEY,
   article_id integer NOT NULL REFERENCES articles(id),
