@@ -1,19 +1,27 @@
-FROM debian:stable-slim
+FROM --platform=linux/amd64 debian:stable-slim
 
 RUN apt update -y \
   && apt clean \
-  && apt install bash curl unzip python2 gyp make g++ -y \
-  && apt install -y --no-install-recommends nodejs \
+  && apt install bash curl unzip -y \
   && apt install -y --no-install-recommends npm \
   && npm install -g npm@latest
 
-RUN curl -LJO https://github.com/LukeChannings/deno-arm64/releases/download/v1.12.1/deno-linux-arm64.zip
-RUN mkdir -p ~/.deno/bin
-RUN unzip deno-linux-arm64.zip -d ~/.deno/bin
-RUN echo $'export DENO_INSTALL="/root/.deno"\nexport PATH="$DENO_INSTALL/bin:$PATH"' >> ~/.bashrc
-RUN . ~/.bashrc
-RUN rm deno-linux-arm64.zip
+RUN curl -fsSL https://deno.land/x/install/install.sh | DENO_INSTALL=/usr/local sh -s v1.16.3
+RUN export DENO_INSTALL="/root/.local"
+RUN export PATH="$DENO_INSTALL/bin:$PATH"
+RUN deno install --unstable --allow-net=realworld_postgres:5432,deno.land --no-check --allow-read=. --allow-write=nessie.config.ts,db --name nessie  https://deno.land/x/nessie/cli.ts
 
-COPY ./.docker/drash-entrypoint-m1.sh /drash-entrypoint-m1.sh
-RUN chmod +x /drash-entrypoint-m1.sh
-ENTRYPOINT ["/drash-entrypoint-m1.sh"]
+WORKDIR /var/www/src
+
+# npm i and build client
+COPY src/package.json src/package-lock.json src/webpack.config.js ./
+COPY src/public public
+COPY src/vue vue
+RUN npm ci --prefer-offline --no-audit --progress=false && npm run webpack
+
+# Copy over other src code
+COPY src/. .
+
+# Cache app.ts and deps file
+RUN deno cache --unstable deps.ts
+RUN deno cache --unstable app.ts

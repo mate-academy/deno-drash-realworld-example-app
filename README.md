@@ -5,18 +5,23 @@
 This real world example application uses Deno, Drash, Vue, Webpack, PostgreSQL,
 and docker-compose.
 
-# How to Run
+# How to Run (Linux)
 
-```
-$ docker-compose build && docker-compose up -d
-$ docker-compose exec drash bash
+```bash
+$ sudo docker-compose build && sudo docker-compose up
+$ sudo docker-compose exec drash bash
 # /root/.deno/bin/nessie migrate
 # /root/.deno/bin/nessie seed
 ```
 
-For M1
-```
-$ sudo docker-compose -f docker-compose.m1.yml build && sudo docker-compose -f docker-compose.m1.yml up
+Navigate to http://localhost:1667
+
+# How to Run (MacBook M1)
+```bash
+$ docker-compose -f docker-compose.m1.yml build && docker-compose -f docker-compose.m1.yml up
+$ docker-compose exec drash bash
+# /root/.deno/bin/nessie migrate
+# /root/.deno/bin/nessie seed
 ```
 
 Navigate to http://localhost:1667
