@@ -45,10 +45,30 @@ class ArticlesResource extends BaseResource {
     return await this.updateArticle(request, response);
   }
 
-  public async DELETE(request: Drash.Request, response: Drash.Response) {
-    console.log("Handling ArticlesResource DELETE");
+  public async DELETE(): Promise<Drash.Http.Response> {
+    console.log('You have found the bug, add this logs to your bug report.');
+    console.log('You have found the bug, add this logs to your bug report.');
+    console.log(`
+    ⣠⠴⠖⠒⠚⠋⠉⠉⠉⠙⠒⠒⠲⢤⡀⢀⡀⠤⠐⠒⠐⠒⠒⠒⠒⠒⠒⠶⢮⣿
+    ⠄⠄⠄⠄⠄⠄⠄⢀⣀⣀⡀⠄⠄⠄⠙⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈
+    ⠄⠄⠄⠄⠄⠄⣴⣿⣙⣿⣿⡄⠄⠄⠄⢸⠄⠄⠄⠄⠄⠄⠄⠄⢀⣶⣹⣷⣦⠄
+    ⠄⠄⠄⠄⠄⠄⢻⣯⣨⣏⣹⠃⠄⠄⠄⡘⠄⠄⠄⠄⠄⠄⠄⠄⠈⢏⢈⣧⠝⠄
+    ⣄⡀⠄⠄⠄⠄⠄⠈⠉⠉⠄⠄⢀⡤⠞⢳⡤⣄⣀⡀⠄⠄⠄⠄⠄⠄⢀⣀⣠⡤
+    ⢦⣍⡛⠒⠶⠤⢤⣤⣤⠶⠶⣛⣡⠄⣰⠟⠄⠄⠈⠉⠙⠛⠛⠛⠛⠛⠉⠉⢀⣴
+    ⠄⠉⠛⠛⠓⠒⠶⠶⠖⠛⢛⣋⡵⠛⠉⠄⠄⠢⢄⡀⠄⠄⠄⠄⠄⠄⣀⡴⠛⠁
+    ⠄⠄⠄⠄⠄⠄⠄⠄⣤⠾⠛⠉⠄⠄⠄⠄⠄⠄⠄⠉⠻⣶⠶⠶⠶⠟⠛⣇⠄⠄
+    ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⠥⠄⠄⠄⠄⠈⢷⡀
+    ⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢻
+    ⣀⣀⣀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
+    ⡛⠛⠛⠹⠿⠻⠶⢶⣦⣤⣤⣀⣀⣀⣀⣀⣀⣀⣀⢀⣀⣀⡀⣀⣀⣀⣠⣴⡶⠿
+    ⣶⣶⣦⣤⣴⣄⣀⡨⠄⡁⠈⠉⠉⠛⠻⠛⠛⠛⠿⠿⠿⠿⠟⠛⠛⠋⠉⢈⣨⣤
+    ⠄⠄⠄⠉⠉⠉⠉⠋⠛⠳⢷⠶⣾⣯⣦⣤⣤⣤⣤⣤⣤⣤⣴⣶⡾⣧⣞⠛⣻⠁
+    ⠿⠿⠷⠶⢿⣦⣤⣦⣰⣄⣄⢀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⢀⣀⣰⣼⠟⠄
+    `);
+    console.log('You have found the bug, add this logs to your bug report.');
+    console.log('You have found the bug, add this logs to your bug report.');
 
-    return await this.deleteArticle(request, response);
+    return await this.updateArticle();
   }
 
   //////////////////////////////////////////////////////////////////////////////
