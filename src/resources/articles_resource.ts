@@ -31,8 +31,31 @@ class ArticlesResource extends BaseResource {
 
   public async POST(): Promise<Drash.Http.Response> {
     console.log("Handling ArticlesResource POST.");
+    console.log('You have found one of the two bugs for this task, add these logs to your bug report.');
+    console.log('NOTE: These logs are here just for fun. The real error logs are more comprehensive and informative.');
+    console.log(`
+    ▒▒▒▒▒▒▒▓
+    ▒▒▒▒▒▒▒▓▓▓
+    ▒▓▓▓▓▓▓░░░▓
+    ▒▓░░░░▓░░░░▓
+    ▓░░░░░░▓░▓░▓
+    ▓░░░░░░▓░░░▓
+    ▓░░▓░░░▓▓▓▓
+    ▒▓░░░░▓▒▒▒▒▓
+    ▒▒▓▓▓▓▒▒▒▒▒▓
+    ▒▒▒▒▒▒▒▒▓▓▓▓
+    ▒▒▒▒▒▓▓▓▒▒▒▒▓
+    ▒▒▒▒▓▒▒▒▒▒▒▒▒▓
+    ▒▒▒▓▒▒▒▒▒▒▒▒▒▓
+    ▒▒▓▒▒▒▒▒▒▒▒▒▒▒▓
+    ▒▓▒▓▒▒▒▒▒▒▒▒▒▓
+    ▒▓▒▓▓▓▓▓▓▓▓▓▓
+    ▒▓▒▒▒▒▒▒▒▓
+    ▒▒▓▒▒▒▒▒▓
+    `);
+    console.log('You have found one of the two bugs for this task, add these logs to your bug report.');
 
-    if (this.request.url_path.includes("/favorite")) {
+    if (!this.request.url_path.includes("/favorite")) {
       return await this.toggleFavorite();
     }
 
