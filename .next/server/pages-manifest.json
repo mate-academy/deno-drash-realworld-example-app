@@ -1,0 +1,16 @@
+{
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/article/[pid]": "pages/article/[pid].js",
+  "/editor/[pid]": "pages/editor/[pid].js",
+  "/editor": "pages/editor.html",
+  "/": "pages/index.js",
+  "/profile/[pid]/favorites": "pages/profile/[pid]/favorites.js",
+  "/profile/[pid]": "pages/profile/[pid].js",
+  "/settings": "pages/settings.html",
+  "/ssr": "pages/ssr.js",
+  "/user/login": "pages/user/login.html",
+  "/user/register": "pages/user/register.html",
+  "/_error": "pages/_error.js",
+  "/404": "pages/404.html"
+}
