@@ -1,28 +1,17 @@
 # ![Drash Example App](logo.png)
 
-This real world example application uses Deno, Drash, Vue, Webpack, PostgreSQL,
-and docker-compose.
-
-Drash codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) spec and API
-
 ## How to Run
 
 1. x86 chips
 
     ```bash
-      docker-compose build && docker-compose up
-    ```
-
-    If case of `"docker-compose" command not found`, use this command
-
-    ```bash
       docker compose build && docker compose up
     ```
 
-1. Apple silicon chips (M1, M2)
+1. Apple silicon M-chips
 
     ```bash
-      docker-compose -f docker-compose.m1.yml build && docker-compose -f docker-compose.m1.yml up
+      docker compose -f docker-compose.m1.yml build && docker compose -f docker-compose.m1.yml up
     ```
 
 Navigate to [http://localhost:1667](http://localhost:1667)
@@ -44,24 +33,3 @@ Username: user32
 Password: Userpass1
 Email: user32@hotmail.com
 ```
-
-## Built With
-
-- [Docker](https://www.docker.com/) - Containerisation
-- [Apache](https://httpd.apache.org/) - Acts as how Apache can be used as a
-  proxy server for Drash
-- [Deno](https://deno.land) - Javascript and Typescript runtime
-- [Drash](https://drash.land/drash) - Web server
-- [Vue](https://vuejs.org/) - Frontend framework
-- [Webpack](https://webpack.js.org/) - Bundling Vue
-- [Postgres](https://github.com/deno-postgres/deno-postgres) - Postgres driver
-  for the applications database
-- [Bcrypt](https://github.com/jamesbroadberry/deno-bcrypt/tree/master) - Hashing
-  and comparing passwords
-- [Rhum](https://github.com/drashland/rhum) - Testing framework
-- [Dmm](https://github.com/drashland/dmm) - Module Manager for Deno to update
-  our dependencies
-- [Vue-input](https://www.npmjs.com/package/@johmun/vue-tags-input) - Library
-  used to help the display of article tags as 'pills', allowing them to be
-  removed and added like a shopping cart
-- [Cypress](https://cypress.io/) - Browser testing framework
