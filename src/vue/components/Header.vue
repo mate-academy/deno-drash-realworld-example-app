@@ -7,6 +7,7 @@
       <ul v-if="!is_authenticated" class="nav navbar-nav pull-xs-right">
         <li class="nav-item">
           <router-link
+            data-cy="home-link"
             class="nav-link"
             active-class="active"
             exact
@@ -17,6 +18,7 @@
         </li>
         <li class="nav-item">
           <router-link
+            data-cy="sign-in-link"
             class="nav-link"
             active-class="active"
             exact
@@ -27,6 +29,7 @@
         </li>
         <li class="nav-item">
           <router-link
+            data-cy="sign-up-link"
             class="nav-link"
             active-class="active"
             exact
@@ -49,6 +52,7 @@
         </li>
         <li class="nav-item">
           <router-link
+            data-cy="new-article-link"
             class="nav-link"
             active-class="active"
             :to="{
@@ -61,6 +65,7 @@
         </li>
         <li class="nav-item">
           <router-link
+            data-cy="settings-link"
             class="nav-link"
             active-class="active"
             exact
@@ -71,6 +76,7 @@
         </li>
         <li class="nav-item" v-if="user.username">
           <router-link
+            data-cy="username-link"
             class="nav-link"
             active-class="active"
             exact
