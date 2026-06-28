@@ -41,7 +41,29 @@ class ArticlesResource extends BaseResource {
 
   public async PUT(): Promise<Drash.Http.Response> {
     console.log("Handling ArticlesResource PUT");
-
+    console.log('You have found one of the two bugs for this task! Describe the bug and add these logs to your bug report.');
+    console.log('NOTE: These logs are here just for fun. The real error logs are more comprehensive and informative.');
+    console.log(`
+    ▒▒▒▒▒▒▒▓
+    ▒▒▒▒▒▒▒▓▓▓
+    ▒▓▓▓▓▓▓░░░▓
+    ▒▓░░░░▓░░░░▓
+    ▓░░░░░░▓░▓░▓
+    ▓░░░░░░▓░░░▓
+    ▓░░▓░░░▓▓▓▓
+    ▒▓░░░░▓▒▒▒▒▓
+    ▒▒▓▓▓▓▒▒▒▒▒▓
+    ▒▒▒▒▒▒▒▒▓▓▓▓
+    ▒▒▒▒▒▓▓▓▒▒▒▒▓
+    ▒▒▒▒▓▒▒▒▒▒▒▒▒▓
+    ▒▒▒▓▒▒▒▒▒▒▒▒▒▓
+    ▒▒▓▒▒▒▒▒▒▒▒▒▒▒▓
+    ▒▓▒▓▒▒▒▒▒▒▒▒▒▓
+    ▒▓▒▓▓▓▓▓▓▓▓▓▓
+    ▒▓▒▒▒▒▒▒▒▓
+    ▒▒▓▒▒▒▒▒▓
+    `);
+    console.log('You have found one of the two bugs for this task! Describe the bug and add these logs to your bug report.');
     return await this.updateArticle();
   }
 
@@ -183,7 +205,7 @@ class ArticlesResource extends BaseResource {
       inputArticle.updated_at,
       inputArticle.id,
     );
-    await article.save();
+    // await article.save();
 
     if (!article) {
       return this.errorResponse(500, "Article could not be saved.");
